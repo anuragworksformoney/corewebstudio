@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, RefreshCw, MessageSquare, Loader2, AlertCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, RefreshCw, MessageSquare, Loader2, AlertCircle, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
-import { getWhatsAppUrl } from '../config/contact';
+import { getWhatsAppUrl, STUDIO_EMAIL } from '../config/contact';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
 
@@ -138,16 +138,26 @@ export default function ContactSection({ inquiryProject, inquiryService }: Conta
                 <p className="text-[10px] sm:text-[11px] uppercase font-black tracking-wider text-[#666666] mb-1.5 sm:mb-2">
                   PREFER A DIRECT CONVERSATION?
                 </p>
-                <a
-                  href={getWhatsAppUrl()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor-text="LET'S TALK"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-black text-[#111111] hover:text-[#0047FF] transition-colors group cursor-pointer"
-                >
-                  <MessageSquare className="w-4 h-4 text-[#25D366]" />
-                  <span className="underline underline-offset-4 decoration-2 decoration-[#0047FF]">Chat directly on WhatsApp →</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cursor-text="LET'S TALK"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-black text-[#111111] hover:text-[#0047FF] transition-colors group cursor-pointer"
+                  >
+                    <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                    <span className="underline underline-offset-4 decoration-2 decoration-[#0047FF]">Chat directly on WhatsApp →</span>
+                  </a>
+                  <span className="hidden sm:inline text-[#AAAAAA]">•</span>
+                  <a
+                    href={`mailto:${STUDIO_EMAIL}`}
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-black text-[#111111] hover:text-[#0047FF] transition-colors group cursor-pointer"
+                  >
+                    <Mail className="w-4 h-4 text-[#0047FF]" />
+                    <span className="underline underline-offset-4 decoration-2 decoration-[#0047FF]">{STUDIO_EMAIL}</span>
+                  </a>
+                </div>
               </div>
             </div>
 

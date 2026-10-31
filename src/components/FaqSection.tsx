@@ -9,7 +9,7 @@ interface FaqItem {
 const FAQ_ITEMS: FaqItem[] = [
   {
     num: '01',
-    question: 'What services does CORE WEB STUDIO provide?',
+    question: 'What services does CORE WEB STUDIOS provide?',
     answer:
       'We provide website design & development, WhatsApp automation, SEO & Google visibility, lead generation and business automation.',
   },

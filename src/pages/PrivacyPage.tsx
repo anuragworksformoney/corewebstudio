@@ -6,7 +6,7 @@ interface PrivacyPageProps {
 }
 
 export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
-  const whatsappUrl = getWhatsAppUrl("Hi CORE WEB STUDIO! I have a question regarding your Privacy Policy.");
+  const whatsappUrl = getWhatsAppUrl("Hi CORE WEB STUDIOS! I have a question regarding your Privacy Policy.");
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-8 lg:px-12 py-8 sm:py-16">
@@ -34,11 +34,11 @@ export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
         </h1>
 
         <p className="text-sm font-bold uppercase tracking-wider text-[#666666]">
-          CORE WEB STUDIO • LAST UPDATED: MARCH 2026
+          CORE WEB STUDIOS • LAST UPDATED: MARCH 2026
         </p>
 
         <div className="mt-6 pt-6 border-t-2 border-[#111111]/10 text-base sm:text-lg text-[#222222] font-medium leading-relaxed">
-          At CORE WEB STUDIO, we respect your privacy and are committed to safeguarding the personal and business information you share with us. This Privacy Policy explains what information we collect, how it is handled, and how your privacy is protected when you visit our website or work with our digital studio.
+          At CORE WEB STUDIOS, we respect your privacy and are committed to safeguarding the personal and business information you share with us. This Privacy Policy explains what information we collect, how it is handled, and how your privacy is protected when you visit our website or work with our digital studio.
         </div>
       </div>
 
@@ -105,7 +105,7 @@ export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
           </div>
           <div className="text-sm sm:text-base text-[#333333] space-y-3 leading-relaxed">
             <p>
-              CORE WEB STUDIO does not sell, rent, monetize, or trade your personal or business data to third parties, data aggregators, or advertising networks under any circumstances.
+              CORE WEB STUDIOS does not sell, rent, monetize, or trade your personal or business data to third parties, data aggregators, or advertising networks under any circumstances.
             </p>
             <p>
               Your contact details and business specifications are strictly utilized by our internal studio team to deliver your requested digital services.
@@ -123,7 +123,7 @@ export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
           </div>
           <div className="text-sm sm:text-base text-[#333333] space-y-3 leading-relaxed">
             <p>
-              We provide direct WhatsApp links and integration to enable swift, convenient communication. When you message CORE WEB STUDIO on WhatsApp:
+              We provide direct WhatsApp links and integration to enable swift, convenient communication. When you message CORE WEB STUDIOS on WhatsApp:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-[#444444]">
               <li>Your WhatsApp telephone number and profile display name are transmitted to our studio chat.</li>
@@ -182,7 +182,7 @@ export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
               Depending on your jurisdiction, you have the right to:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-[#444444]">
-              <li>Request a copy of the personal information CORE WEB STUDIO holds about you.</li>
+              <li>Request a copy of the personal information CORE WEB STUDIOS holds about you.</li>
               <li>Request correction or rectification of incomplete or inaccurate data.</li>
               <li>Request deletion or restriction of processing of your personal information.</li>
               <li>Opt out of any direct communication or updates at any time.</li>
@@ -205,7 +205,7 @@ export default function PrivacyPage({ onNavigateHome }: PrivacyPageProps) {
             <div className="mt-4 p-4 rounded-xl bg-[#FAF7EE] border border-[#111111]/20 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
               <div>
                 <p className="font-bold text-[#111111] text-sm">Privacy Inquiries</p>
-                <p className="text-xs text-[#666666]">Anurag Tiwari • Founder, CORE WEB STUDIO</p>
+                <p className="text-xs text-[#666666]">Anurag Tiwari • Founder, CORE WEB STUDIOS</p>
               </div>
               <div className="flex items-center gap-3 text-xs font-bold uppercase">
                 <a

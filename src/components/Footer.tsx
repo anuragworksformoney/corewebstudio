@@ -26,7 +26,7 @@ export default function Footer({ onNavigate }: FooterProps = {}) {
           {/* Brand Name */}
           <div>
             <span className="font-black tracking-tight text-xl sm:text-2xl text-white uppercase block">
-              CORE WEB STUDIO
+              CORE WEB STUDIOS
             </span>
           </div>
 
@@ -63,7 +63,7 @@ export default function Footer({ onNavigate }: FooterProps = {}) {
         {/* Bottom Copyright & Links */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-bold uppercase tracking-wider text-[#777777] text-center sm:text-left">
           <div>
-            © 2026 CORE WEB STUDIO. ALL RIGHTS RESERVED.
+            © 2026 CORE WEB STUDIOS. ALL RIGHTS RESERVED.
           </div>
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2">
             <a

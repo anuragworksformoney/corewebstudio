@@ -41,7 +41,7 @@ export default function StudioLogo({
         {!imgError ? (
           <img
             src="/core-web-studio-mark.png"
-            alt="CORE WEB STUDIO"
+            alt="CORE WEB STUDIOS"
             className="w-full h-full object-contain filter drop-shadow-[0_1px_1px_rgba(0,0,0,0.05)]"
             onError={() => setImgError(true)}
             loading="eager"
@@ -66,7 +66,7 @@ export default function StudioLogo({
                 : 'text-[#111111] group-hover:text-[#0047FF]'
             } transition-colors`}
           >
-            CORE WEB STUDIO
+            CORE WEB STUDIOS
           </span>
           <span
             className={`uppercase ${descriptorSizes[size]} font-bold mt-1 leading-none ${

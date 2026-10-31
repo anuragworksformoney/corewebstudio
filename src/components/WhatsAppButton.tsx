@@ -21,7 +21,7 @@ export default function WhatsAppButton() {
         data-cursor-text="LET'S TALK"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        aria-label="Chat with CORE WEB STUDIO on WhatsApp"
+        aria-label="Chat with CORE WEB STUDIOS on WhatsApp"
         className="group relative flex items-center gap-2 h-11 w-11 sm:h-12 sm:w-auto px-0 sm:px-4 justify-center rounded-full bg-[#25D366] text-white border-2 border-[#111111] shadow-[3px_3px_0px_#111111] hover:shadow-[4px_4px_0px_#0047FF] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0 active:translate-y-0 transition-all duration-200 cursor-pointer"
       >
         {/* SVG WhatsApp Logo */}

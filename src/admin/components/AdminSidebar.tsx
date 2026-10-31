@@ -85,7 +85,7 @@ export default function AdminSidebar({ isOpen, onClose, onNavigatePublic }: Admi
               </div>
               <div className="leading-tight">
                 <span className="font-extrabold text-sm text-white tracking-tight block">
-                  CORE WEB STUDIO
+                  CORE WEB STUDIOS
                 </span>
                 <span className="text-[10px] font-semibold text-blue-400 uppercase tracking-wider block">
                   Admin Portal
@@ -161,7 +161,7 @@ export default function AdminSidebar({ isOpen, onClose, onNavigatePublic }: Admi
                 {adminUser?.displayName || adminUser?.email?.split('@')[0] || 'Administrator'}
               </p>
               <p className="text-[10px] text-slate-400 truncate">
-                {adminUser?.email || 'admin@corewebstudio.in'}
+                {adminUser?.email || 'admin@corewebstudios.in'}
               </p>
             </div>
             <button

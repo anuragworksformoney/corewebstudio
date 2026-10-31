@@ -61,13 +61,13 @@ export default function App() {
 
   useEffect(() => {
     if (route === 'admin') {
-      document.title = 'CORE WEB STUDIO — Admin Portal';
+      document.title = 'CORE WEB STUDIOS — Admin Portal';
     } else if (route === 'terms') {
-      document.title = 'Terms & Conditions — CORE WEB STUDIO';
+      document.title = 'Terms & Conditions — CORE WEB STUDIOS';
     } else if (route === 'privacy') {
-      document.title = 'Privacy Policy — CORE WEB STUDIO';
+      document.title = 'Privacy Policy — CORE WEB STUDIOS';
     } else {
-      document.title = 'CORE WEB STUDIO — Digital Solutions for Real Businesses';
+      document.title = 'CORE WEB STUDIOS — Digital Solutions for Real Businesses';
     }
   }, [route]);
 
@@ -125,7 +125,7 @@ export default function App() {
             <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-lg mb-3 shadow-md">
               C
             </div>
-            <p className="text-xs font-semibold text-slate-700">Loading CORE WEB STUDIO Admin Portal...</p>
+            <p className="text-xs font-semibold text-slate-700">Loading CORE WEB STUDIOS Admin Portal...</p>
           </div>
         }
       >
@@ -185,7 +185,7 @@ export default function App() {
               <About />
             </SectionReveal>
 
-            {/* 8. Dedicated Purpose Section: WHY CORE WEB STUDIO EXISTS */}
+            {/* 8. Dedicated Purpose Section: WHY CORE WEB STUDIOS EXISTS */}
             <SectionReveal>
               <Purpose />
             </SectionReveal>

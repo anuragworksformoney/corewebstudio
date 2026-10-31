@@ -19,9 +19,10 @@ import { handleFirestoreError, OperationType } from './utils/firestoreError';
 
 // Authorized emails that automatically qualify as administrative users
 const BOOTSTRAPPED_ADMIN_EMAILS = [
+  'hello.macwithanurag@gmail.com',
   'anurag.tiwari@universal.edu.in',
-  'connect@corewebstudio.in',
-  'hello@corewebstudio.in',
+  'connect@corewebstudios.in',
+  'hello@corewebstudios.in',
 ];
 
 interface ToastState {
@@ -34,6 +35,7 @@ interface AdminContextType {
   adminUser: AdminUser | null;
   loadingAuth: boolean;
   isAuthorizedAdmin: boolean;
+  authError: string | null;
   activeTab: AdminTab;
   setActiveTab: (tab: AdminTab) => void;
   leads: Lead[];
@@ -63,6 +65,7 @@ export const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [isAuthorizedAdmin, setIsAuthorizedAdmin] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<AdminTab>('dashboard');
 
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -90,6 +93,8 @@ export const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
+      setAuthError(null);
+
       if (!currentUser) {
         setAdminUser(null);
         setIsAuthorizedAdmin(false);
@@ -130,12 +135,25 @@ export const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) =
             const adminDocRef = doc(db, 'admins', currentUser.uid);
             const adminDoc = await getDoc(adminDocRef);
             if (adminDoc.exists()) {
-              authorized = true;
               const data = adminDoc.data();
-              role = (data.role as 'owner' | 'admin') || 'admin';
+              const rawRole = typeof data?.role === 'string' ? data.role.trim().toLowerCase() : '';
+              if (rawRole === 'admin' || rawRole === 'owner' || !data?.role) {
+                authorized = true;
+                role = (rawRole as 'owner' | 'admin') || 'admin';
+              }
             }
-          } catch {
-            // Document check blocked or does not exist
+          } catch (docErr: unknown) {
+            console.error('Failed to read admin document from Firestore:', docErr);
+            const msg = docErr instanceof Error ? docErr.message : String(docErr);
+            if (msg.includes('permission') || msg.includes('Missing or insufficient permissions')) {
+              setAuthError(
+                'Firestore permission error: Your Firestore Security Rules in Firebase Console are blocking read access to /admins/' +
+                  currentUser.uid +
+                  '. Please deploy the provided firestore.rules to Firebase Console.'
+              );
+            } else {
+              setAuthError(msg);
+            }
           }
         }
 
@@ -456,6 +474,7 @@ export const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         adminUser,
         loadingAuth,
         isAuthorizedAdmin,
+        authError,
         activeTab,
         setActiveTab,
         leads,

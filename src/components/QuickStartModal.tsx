@@ -112,7 +112,7 @@ export default function QuickStartModal({ isOpen, onClose, prefillProject }: Qui
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#0047FF]" />
             <span className="text-xs uppercase font-black tracking-widest text-[#0047FF]">
-              CORE WEB STUDIO INTAKE
+              CORE WEB STUDIOS INTAKE
             </span>
           </div>
           <button

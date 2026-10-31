@@ -35,7 +35,7 @@ export default function Principles({ onOpenProjectModal }: PrinciplesProps) {
             THE DIFFERENCE
           </span>
           <h2 className="font-black uppercase text-2xl min-[360px]:text-3xl sm:text-6xl md:text-7xl text-[#111111] leading-[0.94] tracking-tight">
-            WHY CORE WEB STUDIO?
+            WHY CORE WEB STUDIOS?
           </h2>
         </div>
 

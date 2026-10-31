@@ -8,7 +8,7 @@ interface AccessDeniedProps {
 }
 
 export default function AccessDenied({ onNavigatePublic }: AccessDeniedProps) {
-  const { user, logout } = useAdmin();
+  const { user, logout, authError } = useAdmin();
   const [copied, setCopied] = useState(false);
 
   const handleCopyUid = () => {
@@ -30,8 +30,15 @@ export default function AccessDenied({ onNavigatePublic }: AccessDeniedProps) {
           Administrator Authorization Required
         </h1>
         <p className="text-sm text-slate-700 leading-relaxed mb-6">
-          You are signed in as <strong className="text-slate-900">{user?.email || 'Authenticated User'}</strong>, but this account is not registered as an authorized administrator for CORE WEB STUDIO.
+          You are signed in as <strong className="text-slate-900">{user?.email || 'Authenticated User'}</strong>, but this account is not registered as an authorized administrator for CORE WEB STUDIOS.
         </p>
+
+        {authError && (
+          <div className="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 text-left text-xs text-rose-800 space-y-1.5 animate-in fade-in duration-200">
+            <p className="font-bold text-rose-900">Firestore Access Notice:</p>
+            <p className="leading-relaxed text-[11px] text-rose-800">{authError}</p>
+          </div>
+        )}
 
         <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 text-left mb-6 text-xs space-y-2">
           <div className="flex items-center justify-between">

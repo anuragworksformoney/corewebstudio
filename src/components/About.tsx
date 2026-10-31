@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { getWhatsAppUrl } from '../config/contact';
 
 export default function About() {
-  const whatsappUrl = getWhatsAppUrl("Hi Anurag! I'm interested in building a website with CORE WEB STUDIO. Let's discuss.");
+  const whatsappUrl = getWhatsAppUrl("Hi Anurag! I'm interested in building a website with CORE WEB STUDIOS. Let's discuss.");
 
   return (
     <section id="about" className="w-full py-8 sm:py-24 lg:py-28">

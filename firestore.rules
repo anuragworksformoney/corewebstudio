@@ -10,9 +10,10 @@ service cloud.firestore {
     function isAdmin() {
       return isSignedIn() && (
         exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+        || (request.auth.token.email == 'hello.macwithanurag@gmail.com' && request.auth.token.email_verified == true)
         || (request.auth.token.email == 'anurag.tiwari@universal.edu.in' && request.auth.token.email_verified == true)
-        || (request.auth.token.email == 'connect@corewebstudio.in' && request.auth.token.email_verified == true)
-        || (request.auth.token.email == 'hello@corewebstudio.in' && request.auth.token.email_verified == true)
+        || (request.auth.token.email == 'connect@corewebstudios.in' && request.auth.token.email_verified == true)
+        || (request.auth.token.email == 'hello@corewebstudios.in' && request.auth.token.email_verified == true)
         || request.auth.token.admin == true
       );
     }

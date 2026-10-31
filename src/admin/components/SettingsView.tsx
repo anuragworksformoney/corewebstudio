@@ -61,7 +61,7 @@ export default function SettingsView() {
             <span className="font-bold text-slate-700 uppercase tracking-wider text-[10px] block mb-1">
               Agency Name
             </span>
-            <span className="font-black text-sm text-slate-900">CORE WEB STUDIO</span>
+            <span className="font-black text-sm text-slate-900">CORE WEB STUDIOS</span>
           </div>
 
           <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-100">

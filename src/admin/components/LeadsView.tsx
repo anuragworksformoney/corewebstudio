@@ -84,7 +84,7 @@ export default function LeadsView({ onSelectLead, onScheduleFollowUp }: LeadsVie
               Lead Management
             </h2>
             <p className="text-xs text-slate-700 mt-0.5">
-              Live prospective inquiries from the CORE WEB STUDIO contact forms ({leads.length} total)
+              Live prospective inquiries from the CORE WEB STUDIOS contact forms ({leads.length} total)
             </p>
           </div>
 

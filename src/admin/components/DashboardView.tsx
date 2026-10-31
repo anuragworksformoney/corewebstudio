@@ -56,7 +56,7 @@ export default function DashboardView({ onSelectLead, onOpenNewProject }: Dashbo
             <span>Studio Operations Center</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white mb-2">
-            CORE WEB STUDIO Pipeline
+            CORE WEB STUDIOS Pipeline
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
             Monitor client inquiries submitted through the public website, manage ongoing client projects, and coordinate follow-up reminders.

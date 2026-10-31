@@ -49,7 +49,7 @@ export default function AdminHeader({
             {getTitle()}
           </h1>
           <div className="hidden sm:flex items-center gap-1.5 text-[11px] text-slate-700">
-            <span>CORE WEB STUDIO</span>
+            <span>CORE WEB STUDIOS</span>
             <span>&bull;</span>
             <span className="capitalize">{activeTab}</span>
           </div>

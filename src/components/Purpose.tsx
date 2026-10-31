@@ -1,7 +1,7 @@
 import { getWhatsAppUrl } from '../config/contact';
 
 export default function Purpose() {
-  const whatsappUrl = getWhatsAppUrl("Hi Anurag! I read your Founder's Note and would like to discuss a project with CORE WEB STUDIO.");
+  const whatsappUrl = getWhatsAppUrl("Hi Anurag! I read your Founder's Note and would like to discuss a project with CORE WEB STUDIOS.");
 
   return (
     <section id="purpose" className="w-full py-8 sm:py-14 lg:py-16">
@@ -13,12 +13,12 @@ export default function Purpose() {
           </div>
 
           <h2 className="font-black uppercase text-xl sm:text-3xl md:text-4xl text-[#111111] leading-[1.05] tracking-tight mb-4 sm:mb-6">
-            WHY CORE WEB STUDIO EXISTS
+            WHY CORE WEB STUDIOS EXISTS
           </h2>
 
           <div className="pt-4 sm:pt-6 border-t-2 border-[#111111]/10">
             <p className="text-sm min-[360px]:text-base sm:text-2xl text-[#111111] font-semibold leading-relaxed tracking-tight">
-              “I started CORE WEB STUDIO with a simple belief: good digital work should be accessible to every business. Our approach is straightforward — understand the business first, then build the right digital solution around it. Whether it’s a website, automation, SEO or something more specific, the goal is always the same: create work that is thoughtful, useful and built to last.”
+              “I started CORE WEB STUDIOS with a simple belief: good digital work should be accessible to every business. Our approach is straightforward — understand the business first, then build the right digital solution around it. Whether it’s a website, automation, SEO or something more specific, the goal is always the same: create work that is thoughtful, useful and built to last.”
             </p>
 
             {/* Personal signature / attribution */}
@@ -37,7 +37,7 @@ export default function Purpose() {
                   — Anurag Tiwari
                 </span>
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#666666] mt-0.5">
-                  FOUNDER, CORE WEB STUDIO
+                  FOUNDER, CORE WEB STUDIOS
                 </span>
               </div>
 

@@ -89,7 +89,7 @@ export default function AdminLogin({ onNavigatePublic }: AdminLoginProps) {
         className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-slate-900 mb-8 transition-colors cursor-pointer"
       >
         <ArrowLeft className="w-4 h-4" />
-        <span>Return to CORE WEB STUDIO</span>
+        <span>Return to CORE WEB STUDIOS</span>
       </button>
 
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-200 p-7 sm:p-9">
@@ -100,7 +100,7 @@ export default function AdminLogin({ onNavigatePublic }: AdminLoginProps) {
           </div>
           <div>
             <h1 className="font-extrabold text-lg text-slate-900 tracking-tight">
-              CORE WEB STUDIO
+              CORE WEB STUDIOS
             </h1>
             <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider">
               Management Portal
@@ -203,7 +203,7 @@ export default function AdminLogin({ onNavigatePublic }: AdminLoginProps) {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@corewebstudio.in"
+              placeholder="admin@corewebstudios.in"
               className="w-full h-10 px-3.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 transition-all bg-slate-50/50"
             />
           </div>
@@ -246,7 +246,7 @@ export default function AdminLogin({ onNavigatePublic }: AdminLoginProps) {
       </div>
 
       <div className="mt-8 text-center text-xs text-slate-600">
-        CORE WEB STUDIO &copy; {new Date().getFullYear()} &bull; Private System
+        CORE WEB STUDIOS &copy; {new Date().getFullYear()} &bull; Private System
       </div>
     </div>
   );
