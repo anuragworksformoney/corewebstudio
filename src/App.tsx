@@ -147,7 +147,7 @@ export default function App() {
       />
 
       {/* Main Content Flow */}
-      <main className="w-full pt-16 lg:pt-18 overflow-x-clip touch-pan-y">
+      <main className="w-full pt-14 sm:pt-16 lg:pt-18 overflow-x-clip touch-pan-y">
         {route === 'terms' ? (
           <TermsPage onNavigateHome={() => navigateTo('/')} />
         ) : route === 'privacy' ? (

@@ -42,8 +42,8 @@ export default function Hero({ onOpenProjectModal }: HeroProps) {
   };
 
   return (
-    <section className="relative w-full lg:h-[calc(100vh-4.5rem)] lg:min-h-[520px] lg:max-h-[850px] flex flex-col justify-start lg:justify-between pt-2 pb-6 sm:pt-5 sm:pb-8 lg:py-5 xl:py-6 overflow-x-clip lg:overflow-hidden touch-pan-y">
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 w-full flex flex-col lg:h-full lg:flex-1 lg:justify-between">
+    <section className="relative w-full lg:h-[calc(100vh-4.5rem)] lg:min-h-[520px] lg:max-h-[850px] flex flex-col justify-start lg:justify-between pt-2 pb-3.5 sm:pt-5 sm:pb-8 lg:py-5 xl:py-6 overflow-x-clip lg:overflow-hidden touch-pan-y">
+      <div className="relative max-w-6xl mx-auto px-3.5 sm:px-8 lg:px-12 w-full flex flex-col lg:h-full lg:flex-1 lg:justify-between">
         {/* Top Desktop Floating Stickers */}
         <div className="hidden lg:flex items-center justify-between mb-2 xl:mb-3 select-none shrink-0">
           {/* Sticker 1: WEB DESIGN */}
@@ -68,16 +68,26 @@ export default function Hero({ onOpenProjectModal }: HeroProps) {
           </div>
         </div>
 
+        {/* Top Mobile Floating Stickers (Reference: AI JUGAAD tilted badges framing top of hero) */}
+        <div className="flex lg:hidden items-center justify-between pt-1 mb-2 select-none shrink-0 pointer-events-none">
+          <div className="-rotate-3 inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#111111] text-white text-[9px] min-[360px]:text-[10px] font-black uppercase tracking-wider border-2 border-[#111111] shadow-[2px_2px_0px_#0047FF]">
+            WEB DESIGN
+          </div>
+          <div className="rotate-3 inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#0047FF] text-white text-[9px] min-[360px]:text-[10px] font-black uppercase tracking-wider border-2 border-[#111111] shadow-[2px_2px_0px_#111111]">
+            AUTOMATION
+          </div>
+        </div>
+
         {/* Center: Large Editorial Headline */}
-        <div className="py-1 sm:py-2 lg:my-auto">
-          <div className="flex items-center gap-2 mb-2 sm:mb-3 select-none">
+        <div className="py-0.5 sm:py-2 lg:my-auto">
+          <div className="flex items-center gap-2 mb-1.5 sm:mb-3 select-none">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0047FF] shrink-0" />
-            <span className="font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#666666]">
+            <span className="font-mono text-[9px] min-[360px]:text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.2em] text-[#666666]">
               CORE / SYSTEM / DIGITAL
             </span>
           </div>
 
-          <h1 className="font-black uppercase text-[#111111] leading-[0.93] tracking-tighter text-[22px] min-[360px]:text-[28px] xs:text-[38px] sm:text-[52px] md:text-[64px] lg:text-[75px] xl:text-[86px] 2xl:text-[97px] select-none break-normal">
+          <h1 className="font-black uppercase text-[#111111] leading-[0.93] tracking-tighter text-[26px] min-[360px]:text-[32px] min-[390px]:text-[36px] xs:text-[42px] sm:text-[52px] md:text-[64px] lg:text-[75px] xl:text-[86px] 2xl:text-[97px] select-none break-normal">
             <span className="block">WE BUILD</span>
             {/* Dynamic Rotating Word: strictly fixed-height line container to prevent any layout shift */}
             <span className="block text-[#0047FF] h-[1.12em] relative overflow-hidden select-none pointer-events-none touch-pan-y">
@@ -110,11 +120,11 @@ export default function Hero({ onOpenProjectModal }: HeroProps) {
           </h1>
         </div>
 
-        {/* Bottom: Copy, Dual CTAs, & Circular Stamp */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 sm:gap-4 lg:gap-6 pt-3 sm:pt-4 border-t-2 border-[#111111]/10 shrink-0 mt-2 sm:mt-4 lg:mt-0">
-          <div className="max-w-xl">
+        {/* Bottom: Copy, Side-by-Side CTAs, & Circular Stamp */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-2.5 sm:gap-4 lg:gap-6 pt-2.5 sm:pt-4 border-t-2 border-[#111111]/10 shrink-0 mt-1.5 sm:mt-4 lg:mt-0">
+          <div className="max-w-xl w-full">
             {/* Supporting Copy */}
-            <p className="text-sm sm:text-base lg:text-lg text-[#222222] font-semibold leading-snug mb-3 sm:mb-4">
+            <p className="text-xs min-[360px]:text-[13px] sm:text-base lg:text-lg text-[#222222] font-semibold leading-relaxed mb-2.5 sm:mb-4">
               Digital solutions for real businesses.
               <br className="hidden xs:inline" />
               <span className="text-[#555555] block xs:inline xs:ml-1">
@@ -122,25 +132,35 @@ export default function Hero({ onOpenProjectModal }: HeroProps) {
               </span>
             </p>
 
-            {/* Two Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3.5 w-full sm:w-auto max-w-sm sm:max-w-none">
+            {/* Side-by-Side Action Buttons (reference: AI JUGAAD START A PROJECT & SEE OUR WORK side-by-side) */}
+            <div className="flex flex-row items-center gap-2 sm:gap-3.5 w-full max-w-md sm:max-w-none">
               <button
                 type="button"
                 onClick={onOpenProjectModal}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-black uppercase tracking-wider h-11 sm:h-12 px-5 sm:px-7 rounded-full bg-[#111111] text-white border-2 border-[#111111] shadow-[3px_3px_0px_#0047FF] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer shrink-0"
+                className="flex-1 min-w-0 sm:w-auto inline-flex items-center justify-center gap-1 sm:gap-2 text-[10px] min-[360px]:text-xs sm:text-sm font-black uppercase tracking-wider h-10 min-[360px]:h-11 sm:h-12 px-2.5 min-[360px]:px-4 sm:px-7 rounded-full bg-[#111111] text-white border-2 border-[#111111] shadow-[2.5px_2.5px_0px_#0047FF] sm:shadow-[3px_3px_0px_#0047FF] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer shrink-0"
               >
-                <span>START A PROJECT</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="truncate">START A PROJECT</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 hidden min-[360px]:inline" />
               </button>
 
               <button
                 type="button"
                 onClick={scrollToWork}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs sm:text-sm font-black uppercase tracking-wider h-11 sm:h-12 px-5 sm:px-7 rounded-full bg-white text-[#111111] border-2 border-[#111111] shadow-[3px_3px_0px_#111111] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer shrink-0"
+                className="flex-1 min-w-0 sm:w-auto inline-flex items-center justify-center gap-1 sm:gap-2 text-[10px] min-[360px]:text-xs sm:text-sm font-black uppercase tracking-wider h-10 min-[360px]:h-11 sm:h-12 px-2.5 min-[360px]:px-4 sm:px-7 rounded-full bg-white text-[#111111] border-2 border-[#111111] shadow-[2.5px_2.5px_0px_#111111] sm:shadow-[3px_3px_0px_#111111] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer shrink-0"
               >
-                <span>SEE OUR WORK</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="truncate">SEE OUR WORK</span>
+                <ArrowRight className="w-3.5 h-3.5 shrink-0 hidden min-[360px]:inline" />
               </button>
+            </div>
+
+            {/* Mobile bottom microcopy & badge (reference: PSST - THE STICKERS ARE DRAGGABLE + AI BOTS) */}
+            <div className="flex sm:hidden items-center justify-between mt-2 select-none">
+              <span className="font-mono text-[9px] min-[360px]:text-[10px] uppercase font-bold tracking-wider text-[#666666]">
+                PSST — BUILT FOR REAL RESULTS
+              </span>
+              <div className="rotate-2 inline-flex items-center px-2 py-0.5 rounded-full bg-white text-[#111111] text-[9px] font-black uppercase tracking-wider border-2 border-[#111111] shadow-[1.5px_1.5px_0px_#0047FF]">
+                SEO & LEADS
+              </div>
             </div>
           </div>
 

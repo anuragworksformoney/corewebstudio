@@ -20,8 +20,8 @@ export default function Footer({ onNavigate }: FooterProps = {}) {
   };
 
   return (
-    <footer className="w-full bg-[#111111] text-[#FAF7EE] pt-8 sm:pt-16 pb-20 sm:pb-16 border-t-2 border-[#111111]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
+    <footer className="w-full bg-[#111111] text-[#FAF7EE] pt-6 sm:pt-16 pb-16 sm:pb-16 border-t-2 border-[#111111]">
+      <div className="max-w-6xl mx-auto px-3.5 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 sm:gap-6 pb-6 sm:pb-8 border-b border-[#2A2A2A]">
           {/* Brand Name */}
           <div>

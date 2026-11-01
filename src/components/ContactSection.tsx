@@ -94,20 +94,20 @@ export default function ContactSection({ inquiryProject, inquiryService }: Conta
   ];
 
   return (
-    <section id="contact" className="w-full py-8 sm:py-16 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="rounded-2xl sm:rounded-3xl bg-white border-2 border-[#111111] shadow-[4px_4px_0px_#111111] sm:shadow-[6px_6px_0px_#111111] p-5 sm:p-12 lg:p-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14">
+    <section id="contact" className="w-full py-6 sm:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto px-3.5 sm:px-8 lg:px-12">
+        <div className="rounded-2xl sm:rounded-3xl bg-white border-2 border-[#111111] shadow-[3px_3px_0px_#111111] sm:shadow-[6px_6px_0px_#111111] p-4 sm:p-12 lg:p-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-14">
             {/* Left Column: Copy */}
             <div className="lg:col-span-5 flex flex-col justify-between">
               <div>
-                <span className="inline-block text-xs sm:text-sm font-black text-[#0047FF] uppercase tracking-[0.25em] mb-2">
+                <span className="inline-block text-xs sm:text-sm font-black text-[#0047FF] uppercase tracking-[0.25em] mb-1.5 sm:mb-2">
                   CONTACT
                 </span>
-                <h2 className="font-black uppercase text-2xl sm:text-5xl lg:text-6xl text-[#111111] leading-[0.98] tracking-tight mb-3 sm:mb-4">
+                <h2 className="font-black uppercase text-2xl min-[360px]:text-[26px] xs:text-3xl sm:text-5xl lg:text-6xl text-[#111111] leading-[0.98] tracking-tight mb-2 sm:mb-4">
                   HAVE A PROJECT IN MIND?
                 </h2>
-                <p className="text-sm sm:text-lg text-[#444444] font-semibold leading-relaxed mb-6 sm:mb-8">
+                <p className="text-xs min-[360px]:text-sm sm:text-lg text-[#444444] font-semibold leading-relaxed mb-4 sm:mb-8">
                   Tell us what you do. We'll figure out the rest.
                 </p>
               </div>

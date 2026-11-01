@@ -73,7 +73,7 @@ export default function Header({ onOpenProjectModal, onNavigateHome, isHome = tr
       id="main-header"
       className="fixed top-0 left-0 right-0 w-full z-50 bg-[#FAF7EE]/95 backdrop-blur-xs border-b border-[#111111]"
     >
-      <div className="h-16 lg:h-18 max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="h-14 sm:h-16 lg:h-18 max-w-6xl mx-auto px-3.5 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Left: Logo & Wordmark */}
         <a
           href="/"
@@ -149,8 +149,18 @@ export default function Header({ onOpenProjectModal, onNavigateHome, isHome = tr
           </button>
         </nav>
 
-        {/* CTA Button */}
-        <div className="flex items-center gap-3">
+        {/* Action Group: Mobile ENQUIRE + Menu & Desktop START A PROJECT */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Mobile Enquire Button (reference: AI JUGAAD compact ENQUIRE pill) */}
+          <button
+            type="button"
+            onClick={onOpenProjectModal}
+            className="sm:hidden inline-flex items-center justify-center text-[11px] font-black uppercase tracking-wider rounded-full bg-[#111111] text-white px-3.5 py-1.5 border-2 border-[#111111] shadow-[2px_2px_0px_#0047FF] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all cursor-pointer"
+          >
+            <span>ENQUIRE</span>
+          </button>
+
+          {/* Desktop Full CTA Button */}
           <button
             type="button"
             onClick={onOpenProjectModal}
@@ -160,14 +170,14 @@ export default function Header({ onOpenProjectModal, onNavigateHome, isHome = tr
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Hamburger Button */}
           <button
             type="button"
             aria-label="Toggle Navigation Menu"
-            className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl border-2 border-[#111111] bg-white text-[#111111] shadow-[2px_2px_0px_#111111] cursor-pointer shrink-0"
+            className="md:hidden w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center rounded-xl border-2 border-[#111111] bg-white text-[#111111] shadow-[2px_2px_0px_#111111] cursor-pointer shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
       </div>
@@ -176,7 +186,7 @@ export default function Header({ onOpenProjectModal, onNavigateHome, isHome = tr
       {mobileMenuOpen && (
         <>
           <div
-            className="fixed inset-0 top-16 bg-black/40 backdrop-blur-xs z-40 md:hidden"
+            className="fixed inset-0 top-14 sm:top-16 bg-black/40 backdrop-blur-xs z-40 md:hidden"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />

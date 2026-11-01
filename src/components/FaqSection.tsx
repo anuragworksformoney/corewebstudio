@@ -53,14 +53,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="w-full py-8 sm:py-16 lg:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12">
+    <section id="faq" className="w-full py-6 sm:py-16 lg:py-20">
+      <div className="max-w-4xl mx-auto px-3.5 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="mb-6 sm:mb-12">
-          <span className="inline-block text-xs sm:text-sm font-black text-[#0047FF] uppercase tracking-[0.25em] mb-2 sm:mb-3">
+        <div className="mb-4 sm:mb-12">
+          <span className="inline-block text-xs sm:text-sm font-black text-[#0047FF] uppercase tracking-[0.25em] mb-1.5 sm:mb-3">
             FAQ
           </span>
-          <h2 className="font-black uppercase text-2xl min-[360px]:text-3xl sm:text-5xl md:text-6xl text-[#111111] leading-[0.95] tracking-tight">
+          <h2 className="font-black uppercase text-2xl min-[360px]:text-[28px] xs:text-3xl sm:text-5xl md:text-6xl text-[#111111] leading-[0.95] tracking-tight">
             QUESTIONS, ANSWERED.
           </h2>
         </div>
